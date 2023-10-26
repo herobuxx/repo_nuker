@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Repository Cleaner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-zinc-950 text-white">
+    <div class="container min-h-screen min-w-full">
+        <div id="app-info" class="text-center bg-gradient-to-r from-violet-800 to-fuchsia-700 py-48 min-h-screen">
+            <div>
+                <h1 class="text-4xl font-bold">GitHub Repository Nuking Tool</h1>
+                <span>Removing GitHub Repositories always been a headache. Now, we make nuking it way easier!</span>
+            </div>
+
+            <div>
+                <form>
+                    <div class="py-2">
+                        <input type="text" id="username" class="rounded-lg shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            placeholder="Username">
+                        <input type="text" id="token" class="rounded-lg shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            placeholder="Token">
+                    </div>
+                    <div class="py-2">
+                        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded-full">
+                            Fetch Repositories
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="py-5">
+                <a class="no-underline text-white" href="">LEarn More</a>
+            </div>
+        </div>
+    </div>
+    <!--
+    bg-red-500 hover:bg-red-700 text-white mx-2 my-2 py-2 px-4 rounded-sm w-full
+    -->
+
+    <!-- Open the modal using ID.showModal() method -->
+    <dialog id="my_modal_1" class="bg-zinc-800 text-white modal my-4 px-5 rounded-2xl w-70">
+        <div class="modal-box">
+            <div class="py-4">
+                <h1 class="font-bold text-2xl">Select Repositories to delete</h1>
+            </div>
+            <div id="reposContainer" class="repos"></div>
+        </div>
+    </dialog>
+    <script src="src/js/repos.js"></script>
+</body>
+
+</html>
